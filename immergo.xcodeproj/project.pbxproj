@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F63D72E51DE4C480001A0BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */; };
+		F63D72E71DE4C480001A0BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D72E61DE4C480001A0BD7 /* ViewController.swift */; };
+		F63D72EA1DE4C480001A0BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63D72E81DE4C480001A0BD7 /* Main.storyboard */; };
+		F63D72EC1DE4C480001A0BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */; };
+		F63D72EF1DE4C480001A0BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F63D72E11DE4C480001A0BD7 /* immergo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = immergo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F63D72E61DE4C480001A0BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F63D72E91DE4C480001A0BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F63D72EE1DE4C480001A0BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F63D72F01DE4C480001A0BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F63D72DE1DE4C480001A0BD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F63D72D81DE4C480001A0BD7 = {
+			isa = PBXGroup;
+			children = (
+				F63D72E31DE4C480001A0BD7 /* immergo */,
+				F63D72E21DE4C480001A0BD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F63D72E21DE4C480001A0BD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F63D72E11DE4C480001A0BD7 /* immergo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F63D72E31DE4C480001A0BD7 /* immergo */ = {
+			isa = PBXGroup;
+			children = (
+				F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */,
+				F63D72E61DE4C480001A0BD7 /* ViewController.swift */,
+				F63D72E81DE4C480001A0BD7 /* Main.storyboard */,
+				F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */,
+				F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */,
+				F63D72F01DE4C480001A0BD7 /* Info.plist */,
+			);
+			path = immergo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F63D72E01DE4C480001A0BD7 /* immergo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F63D72F31DE4C480001A0BD7 /* Build configuration list for PBXNativeTarget "immergo" */;
+			buildPhases = (
+				F63D72DD1DE4C480001A0BD7 /* Sources */,
+				F63D72DE1DE4C480001A0BD7 /* Frameworks */,
+				F63D72DF1DE4C480001A0BD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = immergo;
+			productName = immergo;
+			productReference = F63D72E11DE4C480001A0BD7 /* immergo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F63D72D91DE4C480001A0BD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "David Faliskie";
+				TargetAttributes = {
+					F63D72E01DE4C480001A0BD7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8V4XE9BJVC;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F63D72DC1DE4C480001A0BD7 /* Build configuration list for PBXProject "immergo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F63D72D81DE4C480001A0BD7;
+			productRefGroup = F63D72E21DE4C480001A0BD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F63D72E01DE4C480001A0BD7 /* immergo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F63D72DF1DE4C480001A0BD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63D72EF1DE4C480001A0BD7 /* LaunchScreen.storyboard in Resources */,
+				F63D72EC1DE4C480001A0BD7 /* Assets.xcassets in Resources */,
+				F63D72EA1DE4C480001A0BD7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F63D72DD1DE4C480001A0BD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63D72E71DE4C480001A0BD7 /* ViewController.swift in Sources */,
+				F63D72E51DE4C480001A0BD7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F63D72E81DE4C480001A0BD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F63D72E91DE4C480001A0BD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F63D72EE1DE4C480001A0BD7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F63D72F11DE4C480001A0BD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F63D72F21DE4C480001A0BD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F63D72F41DE4C480001A0BD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8V4XE9BJVC;
+				INFOPLIST_FILE = immergo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davefaliskie.immergo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F63D72F51DE4C480001A0BD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8V4XE9BJVC;
+				INFOPLIST_FILE = immergo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davefaliskie.immergo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F63D72DC1DE4C480001A0BD7 /* Build configuration list for PBXProject "immergo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63D72F11DE4C480001A0BD7 /* Debug */,
+				F63D72F21DE4C480001A0BD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F63D72F31DE4C480001A0BD7 /* Build configuration list for PBXNativeTarget "immergo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63D72F41DE4C480001A0BD7 /* Debug */,
+				F63D72F51DE4C480001A0BD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F63D72D91DE4C480001A0BD7 /* Project object */;
+}

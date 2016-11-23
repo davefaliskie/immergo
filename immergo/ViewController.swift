@@ -7,19 +7,34 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userEmailLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let currentUserEmail = FIRAuth.auth()?.currentUser?.email
+        
+        userEmailLbl.text = currentUserEmail
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signOut(_ sender: Any) {
+        
+        try! FIRAuth.auth()!.signOut()
+        
+        // Transition to other Scene
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AuthVC") as UIViewController
+        self.present(vc, animated: true, completion: nil)
+        
     }
-
+    
+    
 
 }
 

@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7680BC4FCE35D3386CD5A15E /* Pods_immergo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0250800F87000C6213B603 /* Pods_immergo.framework */; };
 		F63D72E51DE4C480001A0BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */; };
 		F63D72E71DE4C480001A0BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D72E61DE4C480001A0BD7 /* ViewController.swift */; };
 		F63D72EA1DE4C480001A0BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63D72E81DE4C480001A0BD7 /* Main.storyboard */; };
 		F63D72EC1DE4C480001A0BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */; };
 		F63D72EF1DE4C480001A0BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */; };
+		F63D72F71DE4D3C1001A0BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63D72F61DE4D3C1001A0BD7 /* GoogleService-Info.plist */; };
+		F63D72FB1DE4E7D4001A0BD7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D72FA1DE4E7D4001A0BD7 /* AuthenticationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0250800F87000C6213B603 /* Pods_immergo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_immergo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D85859304AA975F24F2963 /* Pods-immergo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-immergo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-immergo/Pods-immergo.debug.xcconfig"; sourceTree = "<group>"; };
 		F63D72E11DE4C480001A0BD7 /* immergo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = immergo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F63D72E61DE4C480001A0BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F63D72EE1DE4C480001A0BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F63D72F01DE4C480001A0BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F63D72F61DE4D3C1001A0BD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F63D72FA1DE4E7D4001A0BD7 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		FDB577150A5ABCEE2AB351DE /* Pods-immergo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-immergo.release.xcconfig"; path = "Pods/Target Support Files/Pods-immergo/Pods-immergo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7680BC4FCE35D3386CD5A15E /* Pods_immergo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8130278C7D1B3CDEAAEB71EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E0250800F87000C6213B603 /* Pods_immergo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4E91A014C5F315AF8F16361 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0D85859304AA975F24F2963 /* Pods-immergo.debug.xcconfig */,
+				FDB577150A5ABCEE2AB351DE /* Pods-immergo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F63D72D81DE4C480001A0BD7 = {
 			isa = PBXGroup;
 			children = (
 				F63D72E31DE4C480001A0BD7 /* immergo */,
 				F63D72E21DE4C480001A0BD7 /* Products */,
+				C4E91A014C5F315AF8F16361 /* Pods */,
+				8130278C7D1B3CDEAAEB71EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +84,12 @@
 			children = (
 				F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */,
 				F63D72E61DE4C480001A0BD7 /* ViewController.swift */,
+				F63D72FA1DE4E7D4001A0BD7 /* AuthenticationViewController.swift */,
 				F63D72E81DE4C480001A0BD7 /* Main.storyboard */,
 				F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */,
 				F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */,
 				F63D72F01DE4C480001A0BD7 /* Info.plist */,
+				F63D72F61DE4D3C1001A0BD7 /* GoogleService-Info.plist */,
 			);
 			path = immergo;
 			sourceTree = "<group>";
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F63D72F31DE4C480001A0BD7 /* Build configuration list for PBXNativeTarget "immergo" */;
 			buildPhases = (
+				DE8FCCD44BE64E6C8600D8AF /* [CP] Check Pods Manifest.lock */,
 				F63D72DD1DE4C480001A0BD7 /* Sources */,
 				F63D72DE1DE4C480001A0BD7 /* Frameworks */,
 				F63D72DF1DE4C480001A0BD7 /* Resources */,
+				E41498DC6CA084B43A8E3D92 /* [CP] Embed Pods Frameworks */,
+				6EA17EE1FBCC3FFB17FB08A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63D72EF1DE4C480001A0BD7 /* LaunchScreen.storyboard in Resources */,
+				F63D72F71DE4D3C1001A0BD7 /* GoogleService-Info.plist in Resources */,
 				F63D72EC1DE4C480001A0BD7 /* Assets.xcassets in Resources */,
 				F63D72EA1DE4C480001A0BD7 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +166,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EA17EE1FBCC3FFB17FB08A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-immergo/Pods-immergo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8FCCD44BE64E6C8600D8AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E41498DC6CA084B43A8E3D92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-immergo/Pods-immergo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F63D72DD1DE4C480001A0BD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F63D72E71DE4C480001A0BD7 /* ViewController.swift in Sources */,
+				F63D72FB1DE4E7D4001A0BD7 /* AuthenticationViewController.swift in Sources */,
 				F63D72E51DE4C480001A0BD7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +293,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -251,12 +335,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0.1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		F63D72F41DE4C480001A0BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D85859304AA975F24F2963 /* Pods-immergo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8V4XE9BJVC;
@@ -264,12 +350,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davefaliskie.immergo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		F63D72F51DE4C480001A0BD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB577150A5ABCEE2AB351DE /* Pods-immergo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8V4XE9BJVC;
@@ -277,7 +364,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davefaliskie.immergo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -300,6 +387,7 @@
 				F63D72F51DE4C480001A0BD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

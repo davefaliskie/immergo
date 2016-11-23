@@ -1,0 +1,6 @@
+framework module Pods_immergo {
+  umbrella header "Pods-immergo-umbrella.h"
+
+  export *
+  module * { export * }
+}

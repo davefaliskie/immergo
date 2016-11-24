@@ -15,6 +15,8 @@
 		F63D72EF1DE4C480001A0BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */; };
 		F63D72F71DE4D3C1001A0BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63D72F61DE4D3C1001A0BD7 /* GoogleService-Info.plist */; };
 		F63D72FB1DE4E7D4001A0BD7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D72FA1DE4E7D4001A0BD7 /* AuthenticationViewController.swift */; };
+		F6474DC01DE765E0007D404D /* Authentication+handlesr.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6474DBF1DE765E0007D404D /* Authentication+handlesr.swift */; };
+		F6B8868E1DE62F2800BFDFF8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8868D1DE62F2800BFDFF8 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		F63D72F01DE4C480001A0BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63D72F61DE4D3C1001A0BD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F63D72FA1DE4E7D4001A0BD7 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		F6474DBF1DE765E0007D404D /* Authentication+handlesr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Authentication+handlesr.swift"; sourceTree = "<group>"; };
+		F6B8868D1DE62F2800BFDFF8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FDB577150A5ABCEE2AB351DE /* Pods-immergo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-immergo.release.xcconfig"; path = "Pods/Target Support Files/Pods-immergo/Pods-immergo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,8 @@
 				F63D72E41DE4C480001A0BD7 /* AppDelegate.swift */,
 				F63D72E61DE4C480001A0BD7 /* ViewController.swift */,
 				F63D72FA1DE4E7D4001A0BD7 /* AuthenticationViewController.swift */,
+				F6474DBF1DE765E0007D404D /* Authentication+handlesr.swift */,
+				F6B8868D1DE62F2800BFDFF8 /* ProfileViewController.swift */,
 				F63D72E81DE4C480001A0BD7 /* Main.storyboard */,
 				F63D72EB1DE4C480001A0BD7 /* Assets.xcassets */,
 				F63D72ED1DE4C480001A0BD7 /* LaunchScreen.storyboard */,
@@ -221,7 +227,9 @@
 			files = (
 				F63D72E71DE4C480001A0BD7 /* ViewController.swift in Sources */,
 				F63D72FB1DE4E7D4001A0BD7 /* AuthenticationViewController.swift in Sources */,
+				F6B8868E1DE62F2800BFDFF8 /* ProfileViewController.swift in Sources */,
 				F63D72E51DE4C480001A0BD7 /* AppDelegate.swift in Sources */,
+				F6474DC01DE765E0007D404D /* Authentication+handlesr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

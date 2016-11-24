@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 
 class AuthenticationViewController: UIViewController {
@@ -26,20 +28,24 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var newPasswordTF: UITextField!
     @IBOutlet weak var repeatPasswordTF: UITextField!
     @IBOutlet weak var signUpAleartTF: UILabel!
+    @IBOutlet weak var nameTF: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // get the state of the current user
         getCurrentUser()
+        
         
     }
 
     // buttons
+    @IBOutlet weak var signOut: UIButton!
     @IBAction func signInPressed(_ sender: Any) {
         loginUser()
     }
+    
     
     @IBAction func signUpPressed(_ sender: Any) {
         createUser()
@@ -48,16 +54,21 @@ class AuthenticationViewController: UIViewController {
     @IBAction func resetPassword(_ sender: Any) {
         resetPassword()
     }
+   
+    
     
     // function to get the current user
     func getCurrentUser(){
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let user = user {
                 // User is signed in.
-                self.currentUserLbl.text! = "Hello, \(user)"
+                self.currentUserLbl.text! = "Hello, \(user.email)"
+                
+                
             } else {
                 // No user is signed in.
                 self.currentUserLbl.text! = "No current user!"
+                
             }
         }
     }
@@ -65,49 +76,121 @@ class AuthenticationViewController: UIViewController {
     
     // function for user to sign up. 
     func createUser(){
+        // set variables from user inputed text
+        let email = self.newEmailTF.text!
+        let password = self.newPasswordTF.text!
+        let repeatPassword = self.repeatPasswordTF.text!
+        let name = self.nameTF.text!
+        
+        
         // check that password and repeate are the same...
-        if(self.newPasswordTF.text! == self.repeatPasswordTF.text!){
+        if(password == repeatPassword){
             
-            // create the user
-            FIRAuth.auth()?.createUser(withEmail: self.newEmailTF.text!, password: self.newPasswordTF.text!, completion: {
-                user, error in
-                
-                if (error?._code == FIRAuthErrorCode.errorCodeInvalidEmail.rawValue){
-                    self.signUpAleartTF.text = "Invalid email address."
+            // make sure the user entered a name...
+            if (name.characters.count <= 2){
+                self.signUpAleartTF.text! = "You must enter a full name"
+            }else{
+    
+                // create the user
+                FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {
+                    user, error in
                     
-                }else if (error?._code == FIRAuthErrorCode.errorCodeEmailAlreadyInUse.rawValue){
-                    self.signUpAleartTF.text = "Account created, use forgot password"
-                
-                }else if (error != nil){
-                    self.signUpAleartTF.text = "Could not create new user!"
-                    
-                }else{
-                    self.signUpAleartTF.text = "User Successfully Created!"
-                    // now Login!
-                    
-                    FIRAuth.auth()?.signIn(withEmail: self.newEmailTF.text!, password: self.newPasswordTF.text!, completion: {
-                        user, error in
+                    if (error?._code == FIRAuthErrorCode.errorCodeInvalidEmail.rawValue){
+                        self.signUpAleartTF.text! = "Invalid email address."
                         
-                        if (error != nil){
-                            self.signUpAleartTF.text = "Error"
-                        }else{
-                            self.signUpAleartTF.text = "Success"
-                            
-                            // Transition to other Scene
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyboard.instantiateViewController(withIdentifier: "welcomeVC") as UIViewController
-                            self.present(vc, animated: true, completion: nil)
+                    }else if (error?._code == FIRAuthErrorCode.errorCodeEmailAlreadyInUse.rawValue){
+                        self.signUpAleartTF.text! = "Account created, use forgot password"
+                    
+                    }else if (error != nil){
+                        self.signUpAleartTF.text! = "Could not create new user!"
+                        
+                    }else{
+                        self.signUpAleartTF.text! = "User Successfully Created!"
+                        
+                        // successuflly authenticated user, update the user database.
+                        
+                        // get users uid
+                        guard let uid = user?.uid else {
+                            return
                         }
                         
-                    })
-                }
-            })
+                        // connect to storage for pic storage
+                        let imageName = NSUUID().uuidString
+                        let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName)")
+                        
+                        if let uploadData = UIImagePNGRepresentation(self.profilePicture.image!){
+                            storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                                
+                                if error != nil {
+                                    print (error!)
+                                    return
+                                }
+                                
+                                if let profileImageURL = metadata?.downloadURL()?.absoluteString {
+                                    let values = ["name": name, "email": email, "profileImageUrl": profileImageURL]
+                                    
+                                    self.registerUserIntoDatabaseWithUID(uid: uid, values: values)
+                                        
+                                    
+                                }
+                                
+                                
+                    
+                            })
+                        }
+                        
+                        
+                        
+                        
+    
+                        
+                        
+                        // now Login!
+                        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {
+                            user, error in
+                            
+                            if (error != nil){
+                                self.signUpAleartTF.text! = "Error"
+                            }else{
+                                self.signUpAleartTF.text! = "Success"
+                                
+                                // Transition to other Scene
+                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                let vc = storyboard.instantiateViewController(withIdentifier: "welcomeVC") as UIViewController
+                                self.present(vc, animated: true, completion: nil)
+                            }
+                            
+                        })
+                    }
+                })
+            }
         }else{
             // passwords were different...
-            self.signUpAleartTF.text = "Passwords do not match."
+            self.signUpAleartTF.text! = "Passwords do not match."
         }
 
     }
+    
+    // connect to the database
+    private func registerUserIntoDatabaseWithUID(uid: String, values: [String: Any]){
+        // set database reference
+        let ref = FIRDatabase.database().reference(fromURL: "https://immergo-90a8b.firebaseio.com/")
+        let usersReference = ref.child("users").child(uid)
+//        let values = ["name": name, "email": email, "profileImageUrl": metadata.downloadUrl()]
+        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+            
+            if (err != nil){
+                self.signUpAleartTF.text! = "Make sure all fields are filled out!"
+            }else{
+                print ("User successuflly created in DB")
+            }
+            
+        })
+
+    }
+    
+    
+    
     
     // function for the user Login
     func loginUser(){
@@ -157,6 +240,16 @@ class AuthenticationViewController: UIViewController {
     }
     
     
+    //setting the profile picture
+    
+    @IBAction func changePressed(_ sender: Any) {
+        changeProfilePicture()
+    }
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    
+
     
     
     
